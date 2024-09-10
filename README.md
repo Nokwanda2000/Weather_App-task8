@@ -6,7 +6,7 @@
 ## Run Locally
 Clone the project
 ```bash
-  git clone https://github.com/Amniei/Shopping-List.git
+  git clone https://github.com/Nokwanda2000/Weather_App-task8.git
 ```
 Go to the project directory
 ```bash
