@@ -9,7 +9,9 @@ html,body,#root{
   height: 100%;
   
 }
-
+body{
+  background-color: blue;
+}
 .container {
   background-image: url('./assets/CLOUD.jpg');
   background-repeat: no-repeat;

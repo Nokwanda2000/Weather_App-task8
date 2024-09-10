@@ -1,19 +1,23 @@
-import React from 'react'
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 export default function Landing() {
-    
-  return (
-    <div>
+    const navigate = useNavigate();
+
+    // Function to handle button click for navigation
+    const handleNavigate = () => {
+        navigate('/Todayweatherpage'); 
+    }
+
+    return (
         <div className="container">
-      <div className="weather-icon">
-        <img />
-      </div>
-      <h1>Weather Forecasts</h1>
-      <p>Lorem ipsum is simply dummy text of the printing and typesetting industry standard text ever the 1500s.</p>
-      <button  >Get Start</button>
-    </div>
-  
-       
-    </div>
-  )
+            <div className="weather-icon">
+                <img  />
+            </div>
+            <h1>Weather Forecasts</h1>
+            <p>Stay updated with everyday weather changes.</p>
+            <button onClick={handleNavigate}>Get Start</button>
+        </div>
+    );
 }
