@@ -10,7 +10,7 @@ Clone the project
 ```
 Go to the project directory
 ```bash
-  cd waether-app
+  cd weather-app
 ```
 Install dependencies
 ```bash
