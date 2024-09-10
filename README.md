@@ -10,7 +10,7 @@ Clone the project
 ```
 Go to the project directory
 ```bash
-  cd Shopping-List
+  cd waether-app
 ```
 Install dependencies
 ```bash
@@ -18,7 +18,7 @@ Install dependencies
 ```
 Start the react server
 ```bash
-  npm run start
+  npm run dev
 ```
 ## Tech Stack
 **Client:** React JS, HTML5, JavaScript, CSS3
