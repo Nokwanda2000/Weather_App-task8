@@ -105,7 +105,7 @@ export default function Todayweather() {
   }
 
   return (
-    <div style={{ backgroundColor: theme === 'light' ? '#f0f0f0' : '#333', padding: '20px', borderRadius: '10px', height: "100vh", color: theme === 'light' ? '#000' : '#fff' }}>
+    <div style={{ backgroundColor: theme === 'light' ? '#f0f0f0' : '#333', padding: '20px', borderRadius: '10px', height: '100vh', color: theme === 'light' ? '#000' : '#fff' }}>
       <div className="app" style={{ backgroundColor: theme === 'light' ? '#fff' : '#444', padding: '20px', borderRadius: '10px', boxShadow: '0px 2px 5px rgba(0, 0, 0, 0.1)' }}>
         
         {/* Theme and Unit Toggle */}
@@ -128,8 +128,8 @@ export default function Todayweather() {
         </form>
 
         {/* Current Weather */}
-        <div className="header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
-          <div className="location" style={{ display: 'flex', alignItems: 'center' }}>
+        <div className="header" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '20px' }}>
+          <div className="location" style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
             <img src={Location} alt="Location Icon" style={{ marginRight: '10px', width: "50px" }} />
             {weatherData.name}
           </div>
@@ -139,11 +139,11 @@ export default function Todayweather() {
         </div>
 
         {/* Weather Info */}
-        <div className="weather-info" style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
-          <div className="temperature" style={{ fontSize: '48px', fontWeight: 'bold', marginRight: '20px' }}>
+        <div className="weather-info" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '20px' }}>
+          <div className="temperature" style={{ fontSize: '48px', fontWeight: 'bold', marginBottom: '10px' }}>
             {Math.round(hourlyForecast[0].main.temp)}°{units === 'metric' ? 'C' : 'F'}
           </div>
-          <div className="weather-icon" style={{ marginRight: '20px' }}>
+          <div className="weather-icon" style={{ marginBottom: '10px' }}>
             <img src={`http://openweathermap.org/img/wn/${hourlyForecast[0].weather[0].icon}.png`} alt={hourlyForecast[0].weather[0].description} />
           </div>
           <div className="weather-description" style={{ fontSize: '16px' }}>
@@ -166,8 +166,8 @@ export default function Todayweather() {
         </div>
 
         {/* Hourly Forecast */}
-        <h2>Hourly Forecast</h2>
-        <div style={{ display: 'flex', overflowX: 'scroll' }}>
+        <h2 style={{ textAlign: 'center' }}>Hourly Forecast</h2>
+        <div style={{ display: 'flex', overflowX: 'auto', padding: '0 10px' }}>
           {hourlyForecast.map((hour, index) => (
             <div key={index} style={{ padding: '10px', textAlign: 'center' }}>
               <div>{new Date(hour.dt_txt).toLocaleTimeString()}</div>
@@ -178,10 +178,10 @@ export default function Todayweather() {
         </div>
 
         {/* Daily Forecast */}
-        <h2>5-Day Forecast</h2>
-        <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+        <h2 style={{ textAlign: 'center' }}>5-Day Forecast</h2>
+        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around' }}>
           {dailyForecast.map((day, index) => (
-            <div key={index} style={{ padding: '10px', textAlign: 'center' }}>
+            <div key={index} style={{ padding: '10px', textAlign: 'center', flex: '1 1 20%', maxWidth: '20%' }}>
               <div>{day.date}</div>
               <img src={`http://openweathermap.org/img/wn/${day.weather.icon}.png`} alt={day.weather.description} />
               <div>{Math.round(day.temp)}°{units === 'metric' ? 'C' : 'F'}</div>
