@@ -21,4 +21,4 @@ Start the react server
   npm run dev
 ```
 ## Tech Stack
-**Client:** React JS, HTML5, JavaScript, CSS3
+**Client:** React JS, HTML5, JavaScript, CSS3, Express
