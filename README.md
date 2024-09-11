@@ -20,5 +20,18 @@ Start the react server
 ```bash
   npm run dev
 ```
+Install backend dependencies
+```bash
+npm i express
+npm i nodemon
+npm i better-sqlite3
+npm i cors
+npm i express
+npm i axios
+```
+Start backend server
+```bash
+  nodemon server.js
+```
 ## Tech Stack
 **Client:** React JS, HTML5, JavaScript, CSS3, Express
