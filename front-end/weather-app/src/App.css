@@ -66,7 +66,53 @@ button:hover {
   
 }
 
+
+
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+@media (width <= 800px){
+  .weather-icon img{
+    width: 50px;
+  
+  }
+.container{
+  width: 100%;
+  margin: 0;
+
+}
+.spinner{
+  margin-left: 0%;
+  margin-top: 0%;
+
+}
+.weather-icon{
+  margin-left: 0%;
+}
+
+.weather-details{
+  margin-left: 0%;
+
+}
+
+.detail-item{
+  margin-left: 0%;
+}
+.header{
+  margin-left: 0%;
+}
+.app{
+  margin-left: 0%;
+  margin-top: 0%;
+  padding: 0%;
+  height: 100%;
+}
+.MAINDIV{
+   
+  margin-left: 0%;
+  margin-top: 0%;
+  padding: 0%;
+}
 }
