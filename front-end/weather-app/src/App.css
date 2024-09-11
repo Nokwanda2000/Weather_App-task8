@@ -7,24 +7,26 @@
 html,body,#root{
   width: 100%;
   height: 100%;
+ 
+ 
   
 }
 body{
-  background-color: blue;
+  background-color: rgb(21, 21, 22);
 }
 .container {
   background-image: url('./assets/CLOUD.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
-  height: 100VH;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 20px;
-  /* width: 100vh; */
+  
 }
 
 .weather-icon img {
@@ -45,4 +47,26 @@ button {
 
 button:hover {
   background-color: #ffd700;
+}
+
+
+.spinner {
+  justify-content: center;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3; /* Light grey border */
+  border-radius: 50%; /* Make it round */
+  border-top-color: #3498db; /* Blue color for the spinning part */
+  animation: spin 1s linear infinite; /* Animation for spinning */
+  justify-content: center;
+  align-items: center;
+  margin-left: 50%;
+  margin-top: 30%;
+  
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
