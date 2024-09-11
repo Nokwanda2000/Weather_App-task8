@@ -105,7 +105,7 @@ export default function Todayweather() {
   }
 
   return (
-    <div style={{ backgroundColor: theme === 'light' ? '#f0f0f0' : '#333', padding: '20px', borderRadius: '10px', height: '100vh', color: theme === 'light' ? '#000' : '#fff' }}>
+    <div className='MAINDIV' style={{ backgroundColor: theme === 'light' ? '#f0f0f0' : '#333', padding: '20px', borderRadius: '10px', height: '100%', color: theme === 'light' ? '#000' : '#fff' }}>
       <div className="app" style={{ backgroundColor: theme === 'light' ? '#fff' : '#444', padding: '20px', borderRadius: '10px', boxShadow: '0px 2px 5px rgba(0, 0, 0, 0.1)' }}>
         
         {/* Theme and Unit Toggle */}
